@@ -5,14 +5,20 @@
  */
 package edu.eci.arsw.threads;
 
+import java.util.Scanner;
+
 /**
  *
- * @author hcadavid
+ * @author Medina-Ruiz
  */
 public class CountThreadsMain {
-    
-    public static void main(String a[]){
-        
+
+    public static void main(String[] args) {
+        Scanner escanear = new Scanner(System.in);
+        CountThread hiloUno = new CountThread();
+        hiloUno.setNumeroA(escanear.nextInt());
+        hiloUno.setNumeroB(escanear.nextInt());
+        hiloUno.start();
     }
     
 }

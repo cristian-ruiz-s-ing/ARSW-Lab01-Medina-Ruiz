@@ -7,15 +7,33 @@ package edu.eci.arsw.threads;
 
 /**
  *
- * @author hcadavid
+ * @author Medina-Ruiz
  */
 public class CountThread extends Thread {
+    int numeroA;
+    int numeroB;
+
+    public int getNumeroB() {
+        return numeroB;
+    }
+
+    public void setNumeroB(int numeroB) {
+        this.numeroB = numeroB;
+    }
+
+    public void setNumeroA(int numeroA) {
+        this.numeroA = numeroA;
+    }
+
+    public int getNumeroA() {
+        return numeroA;
+    }
+
+    @Override
     public void run(){
-        System.out.println("thread is running...");
+        for(int i = numeroA; i <= numeroB; i ++){
+            System.out.println(i);
+        }
     }
-    public static void main(String[] args) {
-        CountThread obj = new CountThread();
-        obj.start();
-    }
-    
+
 }
