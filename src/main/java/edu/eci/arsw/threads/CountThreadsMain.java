@@ -13,19 +13,20 @@ import java.util.Scanner;
  */
 public class CountThreadsMain {
 
-    public static void main(String[] args) {
-        Scanner escanear = new Scanner(System.in);
-        CountThread hiloUno = new CountThread();
-        CountThread hiloDos = new CountThread();
-        CountThread hiloTres = new CountThread();
-        hiloUno.setNumeroA(escanear.nextInt());
-        hiloUno.setNumeroB(escanear.nextInt());
-        hiloDos.setNumeroA(escanear.nextInt());
-        hiloDos.setNumeroB(escanear.nextInt());
-        hiloTres.setNumeroA(escanear.nextInt());
-        hiloTres.setNumeroB(escanear.nextInt());
-        hiloUno.run();
-        hiloDos.run();
-        hiloTres.run();
+  public static void main(String[] args) {
+    try (Scanner escanear = new Scanner(System.in)) {
+      CountThread hiloUno = new CountThread();
+      CountThread hiloDos = new CountThread();
+      CountThread hiloTres = new CountThread();
+      hiloUno.setNumeroA(escanear.nextInt());
+      hiloUno.setNumeroB(escanear.nextInt());
+      hiloDos.setNumeroA(escanear.nextInt());
+      hiloDos.setNumeroB(escanear.nextInt());
+      hiloTres.setNumeroA(escanear.nextInt());
+      hiloTres.setNumeroB(escanear.nextInt());
+      hiloUno.start();
+      hiloDos.start();
+      hiloTres.start();
     }
+  }
 }

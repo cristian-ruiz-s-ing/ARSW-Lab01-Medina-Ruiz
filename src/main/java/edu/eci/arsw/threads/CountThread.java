@@ -10,30 +10,30 @@ package edu.eci.arsw.threads;
  * @author Medina-Ruiz
  */
 public class CountThread extends Thread {
-    int numeroA;
-    int numeroB;
+  int numeroA;
+  int numeroB;
 
-    public int getNumeroB() {
-        return numeroB;
-    }
+  public int getNumeroB() {
+    return numeroB;
+  }
 
-    public void setNumeroB(int numeroB) {
-        this.numeroB = numeroB;
-    }
+  public void setNumeroB(int numeroB) {
+    this.numeroB = numeroB;
+  }
 
-    public void setNumeroA(int numeroA) {
-        this.numeroA = numeroA;
-    }
+  public void setNumeroA(int numeroA) {
+    this.numeroA = numeroA;
+  }
 
-    public int getNumeroA() {
-        return numeroA;
-    }
+  public int getNumeroA() {
+    return numeroA;
+  }
 
-    @Override
-    public void run(){
-        for(int i = numeroA; i <= numeroB; i ++){
-            System.out.println(i);
-        }
+  @Override
+  public void run(){
+    for(int i = numeroA; i <= numeroB; i ++){
+      System.out.println(i);
     }
+  }
 
 }
