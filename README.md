@@ -142,9 +142,9 @@ Rta//
 
 ![](img/Parte3PuntoCinco.PNG)
 
-![](img/Parte3PuntoCincodespuesdeCorrer2.PNG)
+![](img/Parte3PuntoCincoDespuesdeCorrer2.PNG)
 
-![](img/Parte3PuntoCincodespuesdeCorrer.PNG)
+![](img/Parte3PuntoCincoDespuesdeCorrer.PNG)
 
 Al iniciar el programa ejecute el monitor jVisualVM, y a medida que corran las pruebas, revise y anote el consumo de CPU y de memoria en cada caso. ![](img/jvisualvm.png)
 
