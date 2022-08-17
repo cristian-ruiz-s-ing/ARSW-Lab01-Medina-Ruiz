@@ -13,11 +13,11 @@ https://cs-fundamentals.com/tech-interview/java/differences-between-thread-and-p
 
 Rta//
 
-![](img/ParteUnoPuntoUno1.png)
+![](img/ParteUnoPuntoUno1.PNG)
 
-![](img/ParteUnoPuntoUno2.png)
+![](img/ParteUnoPuntoUno2.PNG)
 
-![](img/ParteUnoPuntoUno3.png)
+![](img/ParteUnoPuntoUno3.PNG)
 
 2. Complete el método __main__ de la clase CountMainThreads para que:
     1. Cree 3 hilos de tipo CountThread, asignándole al primero el intervalo [0..99], al segundo [99..199], y al tercero [200..299].
@@ -27,13 +27,13 @@ Rta//
 
 Rta//
 
-![](img/ParteUnoPuntoDos1.png)
+![](img/ParteUnoPuntoDos1.PNG)
 
-![](img/ParteUnoPuntoDos2.png)
+![](img/ParteUnoPuntoDos2.PNG)
 
-![](img/ParteUnoPuntoDos3.png)
+![](img/ParteUnoPuntoDos3.PNG)
 
-![](img/ParteUnoPuntoDos4.png)
+![](img/ParteUnoPuntoDos4.PNG)
 
 Lo que sucede al usar start(), es que le estamos diciendo a nuestro programa que ejecute todo en 
 paralelo, que empiece a lanzar todos los hilos que hubiéramos creado. En ende el resultado se verá
@@ -72,11 +72,11 @@ Para 'refactorizar' este código, y hacer que explote la capacidad multi-núcleo
 
 Rta//
 
-![](img/Parte2Clase.png)
+![](img/Parte2Clase.PNG)
 
-![](img/Parte2Clase2.png)
+![](img/Parte2Clase2.PNG)
 
-![](img/Parte2Clase3.png)
+![](img/Parte2Clase3.PNG)
 
 2. Agregue al método 'checkHost' un parámetro entero N, correspondiente al número de hilos entre los que se va a realizar la búsqueda (recuerde tener en cuenta si N es par o impar!). Modifique el código de este método para que divida el espacio de búsqueda entre las N partes indicadas, y paralelice la búsqueda a través de N hilos. Haga que dicha función espere hasta que los N hilos terminen de resolver su respectivo sub-problema, agregue las ocurrencias encontradas por cada hilo a la lista que retorna el método, y entonces calcule (sumando el total de ocurrencuas encontradas por cada hilo) si el número de ocurrencias es mayor o igual a _BLACK_LIST_ALARM_COUNT_. Si se da este caso, al final se DEBE reportar el host como confiable o no confiable, y mostrar el listado con los números de las listas negras respectivas. Para lograr este comportamiento de 'espera' revise el método [join](https://docs.oracle.com/javase/tutorial/essential/concurrency/join.html) del API de concurrencia de Java. Tenga también en cuenta:
 
@@ -84,9 +84,9 @@ Rta//
 
     * Se sabe que el HOST 202.24.34.55 está reportado en listas negras de una forma más dispersa, y que el host 212.24.24.55 NO está en ninguna lista negra.
 
-![](img/Parte2Clase4.png)
+![](img/Parte2Clase4.PNG)
 
-![](img/Parte2Clase5.png)
+![](img/Parte2Clase5.PNG)
 
 **Parte II.I Para discutir la próxima clase (NO para implementar aún)**
 
@@ -100,51 +100,51 @@ A partir de lo anterior, implemente la siguiente secuencia de experimentos para 
 
 Rta//
 
-![](img/Parte3PuntoUno.png)
+![](img/Parte3PuntoUno.PNG)
 
-![](img/Parte3PuntoUnoDespuesdeEjecutar.png)
+![](img/Parte3PuntoUnoDespuesdeEjecutar.PNG)
 
-![](img/Parte3PuntoUnoDespuesdeEjecutar2.png)
+![](img/Parte3PuntoUnoDespuesdeEjecutar2.PNG)
 
 2. Tantos hilos como núcleos de procesamiento (haga que el programa determine esto haciendo uso del [API Runtime](https://docs.oracle.com/javase/7/docs/api/java/lang/Runtime.html)).
 
 Rta//
 
-![](img/Parte3PuntoDos.png)
+![](img/Parte3PuntoDos.PNG)
 
-![](img/Parte3PuntoDosDespuesdeCorrer2.png)
+![](img/Parte3PuntoDosDespuesdeCorrer2.PNG)
 
-![](img/Parte3PuntoDosDespuesdeCorrer.png)
+![](img/Parte3PuntoDosDespuesdeCorrer.PNG)
 
 3. Tantos hilos como el doble de núcleos de procesamiento.
 
 Rta//
 
-![](img/Parte3PuntoTres.png)
+![](img/Parte3PuntoTres.PNG)
 
-![](img/Parte3PuntoTresDespuesdeEjecutar.png)
+![](img/Parte3PuntoTresDespuesdeEjecutar.PNG)
 
-![](img/Parte3PuntoTresDespuesdeEjecutar2.png)
+![](img/Parte3PuntoTresDespuesdeEjecutar2.PNG)
 
 4. 50 hilos.
 
 Rta//
 
-![](img/Parte3PuntoCuatro.png)
+![](img/Parte3PuntoCuatro.PNG)
 
-![](img/Parte3PuntoCuatroDespuesdeCorrer.png)
+![](img/Parte3PuntoCuatroDespuesdeCorrer.PNG)
 
-![](img/Parte3PuntoCuatroDespuesdeCorrer2.png)
+![](img/Parte3PuntoCuatroDespuesdeCorrer2.PNG)
 
 5. 100 hilos.
 
 Rta//
 
-![](img/Parte3PuntoCinco.png)
+![](img/Parte3PuntoCinco.PNG)
 
-![](img/Parte3PuntoCincodespuesdeCorrer2.png)
+![](img/Parte3PuntoCincodespuesdeCorrer2.PNG)
 
-![](img/Parte3PuntoCincodespuesdeCorrer.png)
+![](img/Parte3PuntoCincodespuesdeCorrer.PNG)
 
 Al iniciar el programa ejecute el monitor jVisualVM, y a medida que corran las pruebas, revise y anote el consumo de CPU y de memoria en cada caso. ![](img/jvisualvm.png)
 
@@ -152,7 +152,7 @@ Con lo anterior, y con los tiempos de ejecución dados, haga una gráfica de tie
 
 Rta//
 
-![](img/Parte3PuntoFinal.png)
+![](img/Parte3PuntoFinal.PNG)
 
 ![](img/Parte3PuntoFinal2.png)
 
