@@ -15,10 +15,14 @@ import java.util.LinkedList;
 public class Main {
 
   public static void main(String a[]) throws InterruptedException {
-    int n = 4;
+    long startTime = System.currentTimeMillis();
+    int n = 100;
     String ipaddress = "202.24.34.55";
     LinkedList<Integer> totalBlackListOcurrences;
     totalBlackListOcurrences= HostBlackListsValidator.checkHost(ipaddress, n);
     System.out.println("The host was found in the following blacklists:"+totalBlackListOcurrences);
+    System.out.println(Runtime.getRuntime().availableProcessors()); //Devuelve el número de procesadores disponibles para la máquina virtual Java.
+    long endTime = System.currentTimeMillis();
+    System.out.println(endTime - startTime);
   }
 }
