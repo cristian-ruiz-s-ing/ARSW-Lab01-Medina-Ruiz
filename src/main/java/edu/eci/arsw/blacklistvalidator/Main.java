@@ -16,7 +16,7 @@ public class Main {
 
   public static void main(String a[]) throws InterruptedException {
     long startTime = System.currentTimeMillis();
-    int n = 100;
+    int n = 400;
     String ipaddress = "202.24.34.55";
     LinkedList<Integer> totalBlackListOcurrences;
     totalBlackListOcurrences= HostBlackListsValidator.checkHost(ipaddress, n);

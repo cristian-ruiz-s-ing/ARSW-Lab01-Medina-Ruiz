@@ -2,7 +2,7 @@
 ### Escuela Colombiana de Ingeniería
 ### Arquitecturas de Software - ARSW
 ## Ejercicio Introducción al paralelismo - Hilos - Caso BlackListSearch
-#### Deivid Sebastian Medina Rativa - Cristian Camilo Ruiz Santa .
+#### Deivid Sebastian Medina Rativa - Cristian Camilo Ruiz Santa.
 
 https://beginnersbook.com/2013/03/java-threads/
 
@@ -162,6 +162,24 @@ Rta//
 
    ![](img/ahmdahls.png), donde _S(n)_ es el mejoramiento teórico del desempeño, _P_ la fracción paralelizable del algoritmo, y _n_ el número de hilos, a mayor _n_, mayor debería ser dicha mejora. Por qué el mejor desempeño no se logra con los 500 hilos?, cómo se compara este desempeño cuando se usan 200?.
 
+   Rta// 
+
+   El mejor desempeño no se logra con 500 hilos debido a que con 500 hilos los nucleos de procesamiento deben dividirse todo el trabajo para ejecutar el proceso en serie en cada nucleo, si este número es muy grande, esto puede afectar al rendimiento y hacer que cada hilo se ejecute lentamente debido a que las fracciones que designa el nucleo para ejecutarlo son muy pequeñas y además son demasiadas tanto de un mismo hilo como de otros que están en "cola de espera" para ser ejecutados.
+   
+   Sin embargo, esto depende mucho de la CPU que se esté usando ya que en nuestro caso, con 500 hilos se obtenía un mejor desempeño que con 200 hilos, pero a la hora de hacerlo con 1000 y 400 hilos, se ve un mejor desempeño a la hora de hacerlo con 400 hilos:
+
+   ![](img/parteIVPunto1.PNG)
+
 2. Cómo se comporta la solución usando tantos hilos de procesamiento como núcleos comparado con el resultado de usar el doble de éste?.
 
+Rta// 
+
+Como pudimos ver el el punto anterior, al hacerlo con tantos hilos como núcleos de procesamiento se demoró prácticamente el doble de tiempo que cuando se usó el doble de estos hilos. Esto nos indica que es más eficiente hacer que un núcleo se encargue de varios procesos aunque los haga por partes cada uno, que de uno solo  aunque lo haga decorrido (Hasta cierto punto)
+
 3. De acuerdo con lo anterior, si para este problema en lugar de 100 hilos en una sola CPU se pudiera usar 1 hilo en cada una de 100 máquinas hipotéticas, la ley de Amdahls se aplicaría mejor?. Si en lugar de esto se usaran c hilos en 100/c máquinas distribuidas (siendo c es el número de núcleos de dichas máquinas), se mejoraría?. Explique su respuesta.
+
+Rta//
+
+Al ejecutar 1 hilo en 100 máquinas hipotéticas, la ley de Amdahls no se aplicaría mejor ya que no se estaría explotando el máximo potencial de multiprocesamiento de cada máquina lo que haría que fuese más lento. 
+
+A diferencia del anterior, en caso de tener n hilos en 100/n máquinas, siendo n el número de núcleos de cada máquina, sí se mejoraría, ya que, aunque se disminuye el número de máquinas que están procesando el problema, se aumenta el número de hilos en cada una y se aprovecha la capacidad multicore de cada una haciendo que el paralelismo sea más eficiente.
